@@ -48,18 +48,26 @@ public class DaturapowderMod {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        // Sagt Neoforge "registrier alles in diesem ding" (pointed zu daturamoditems.java
+        daturamoditems.ITEMS.register(modEventBus);
+        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+
         // Register the item to a creative tab
-        //   modEventBus.addListener(this::addCreative);
+        modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+       // modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {}
 
 
         // Add the example block item to the building blocks tab
-        private void addCreative (BuildCreativeModeTabContentsEvent event){}
+        private void addCreative (BuildCreativeModeTabContentsEvent event){
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
+            event.accept(daturamoditems.DATURA_POWDER);
+    }
 
 
 
