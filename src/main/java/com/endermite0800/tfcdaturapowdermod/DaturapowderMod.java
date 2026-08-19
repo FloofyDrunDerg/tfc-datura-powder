@@ -34,9 +34,11 @@ public class DaturapowderMod {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
-        // Sagt Neoforge "registrier alles in diesem ding" (pointed zu daturamoditems.java
+        // Sagt Neoforge "registrier alles in diesem ding" (pointed zu daturamoditems.java und weitere)
         DaturaModItems.ITEMS.register(modEventBus);
         DaturaModBlocks.register(modEventBus);
+        DaturaModCreativeModeTab.register(modEventBus);
+
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 

@@ -19,9 +19,9 @@ public class DaturaModItems {
     // Item: cocaine powder
     public static final DeferredItem<Item> COCAINE_POWDER = ITEMS.registerSimpleItem("cocaine_powder", new Item.Properties());
     // Item: cocaine raw (Drop from plant)
-    public static final DeferredItem<Item> RAW_COCAINE = ITEMS.registerSimpleItem("raw_cocaine", new Item.Properties());
+    public static final DeferredItem<Item> RAW_COCAINE = ITEMS.registerSimpleItem("cocaine_raw", new Item.Properties());
     // Item: cocaine leaves (Drop from plant)
-    public static final DeferredItem<Item> COCAINE_LEAVES = ITEMS.registerSimpleItem("leaves_cocaine", new Item.Properties());
+    public static final DeferredItem<Item> COCAINE_LEAVES = ITEMS.registerSimpleItem("cocaine_leaves", new Item.Properties());
 
 
 

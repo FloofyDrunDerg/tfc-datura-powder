@@ -22,7 +22,7 @@ public class DaturaModBlocks {
     //registriert neuen Minecraft Block
     public static final DeferredBlock<Block> DATURA_LEAVES_BLOCK = registerBlock("datura_leaves_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops()
+                    .strength(2f)
                     .sound(SoundType.AZALEA_LEAVES)));
 
 
