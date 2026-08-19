@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    { "item": "tfc:plant/sacrd_datura" }
+    { "item": "tfc:plant/sacred_datura" }
   ],
   "result": {
     "id": "tfcdaturapowdermod:datura_powder",

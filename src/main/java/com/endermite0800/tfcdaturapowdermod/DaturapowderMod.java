@@ -1,5 +1,6 @@
 package com.endermite0800.tfcdaturapowdermod;
 
+import com.endermite0800.tfcdaturapowdermod.block.DaturaModBlocks;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -50,6 +51,8 @@ public class DaturapowderMod {
 
         // Sagt Neoforge "registrier alles in diesem ding" (pointed zu daturamoditems.java
         daturamoditems.ITEMS.register(modEventBus);
+        DaturaModBlocks.register(modEventBus);
+
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
 
@@ -57,7 +60,7 @@ public class DaturapowderMod {
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
-       // modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        // modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {}
@@ -67,9 +70,6 @@ public class DaturapowderMod {
         private void addCreative (BuildCreativeModeTabContentsEvent event){
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
             event.accept(daturamoditems.DATURA_POWDER);
-            event.accept(daturamoditems.COCAINE_POWDER);
-            event.accept(daturamoditems.COCAINE_LEAVES);
-            event.accept(daturamoditems.RAW_COCAINE);
     }
 
 
