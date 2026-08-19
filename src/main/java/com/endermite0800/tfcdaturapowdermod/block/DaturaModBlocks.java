@@ -1,16 +1,45 @@
 package com.endermite0800.tfcdaturapowdermod.block;
 
 import com.endermite0800.tfcdaturapowdermod.DaturapowderMod;
+import com.endermite0800.tfcdaturapowdermod.DaturaModItems;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.function.Supplier;
+
+import jdk.javadoc.internal.doclets.formats.html.markup.HtmlStyle.block;
+
+
 public class DaturaModBlocks {
-    public  static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(DaturapowderMod.MODID)
+    public  static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(DaturapowderMod.MODID);
+
+            //registriert neuen Minecraft Block
+    public static final DeferredBlock<Block> DATURA_LEAVES_BLOCK = registerBlock("datura_leaves_block",
+                () -> new Block(BlockBehaviour.Properties.of()
+                        .strength(4f).requiresCorrectToolForDrops()
+                        .sound(SoundType.AZALEA_LEAVES))
+            );
 
 
-    private static <T extends Blocks> void registerBlockItem(String name, DeferredRegister<T> Block) {
-        datur
+
+
+    private static <T extends Block> DeferredRegister<T> registerBlock(String name, Supplier<T> block){
+        DeferredBlock<T> toReturn = BLOCKS.register(name, block);
+        // Callt die BlockItem ding
+        registerBlockItem(name, toReturn);
+        return toReturn;
+    }
+
+    // Macht ein neues Item fuer den Block
+    private static <T extends Blocks> void registerBlockItem(String name, DeferredBlock<T> block) {
+        DaturaModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
 

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraftblock/cube_all", //Alles 6 seiten des blocks haben die Textur in "Textures"
+  "textures": {
+    "all": "tfcdaturapowdermod:block/datura_leaves_block"
+  }
+
+}
