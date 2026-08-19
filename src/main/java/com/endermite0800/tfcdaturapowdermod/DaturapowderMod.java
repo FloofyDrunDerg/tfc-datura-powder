@@ -67,6 +67,9 @@ public class DaturapowderMod {
         private void addCreative (BuildCreativeModeTabContentsEvent event){
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
             event.accept(daturamoditems.DATURA_POWDER);
+            event.accept(daturamoditems.COCAINE_POWDER);
+            event.accept(daturamoditems.COCAINE_LEAVES);
+            event.accept(daturamoditems.RAW_COCAINE);
     }
 
 
