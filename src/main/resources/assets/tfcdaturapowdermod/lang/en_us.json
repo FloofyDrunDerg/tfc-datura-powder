@@ -1,21 +1,6 @@
 {
   "item.tfcdaturapowdermod.datura_powder": "Datura Powder",
   "item.tfcdaturapowdermod.cocaine_powder": "Cocaine Powder",
-  "item.tfcdaturapowdermod.raw_cocaine": "Raw Cocaine"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  "item.tfcdaturapowdermod.raw_cocaine": "Raw Cocaine",
+  "block.tfcdaturapowdermod.datura_leaves_block": "Block of Datura Leaves"
 }

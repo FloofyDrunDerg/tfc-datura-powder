@@ -1,3 +1,4 @@
+
 package com.endermite0800.tfcdaturapowdermod.block;
 
 import com.endermite0800.tfcdaturapowdermod.DaturapowderMod;
@@ -14,36 +15,28 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-import jdk.javadoc.internal.doclets.formats.html.markup.HtmlStyle.block;
 
 
 public class DaturaModBlocks {
     public  static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(DaturapowderMod.MODID);
-
-            //registriert neuen Minecraft Block
+    //registriert neuen Minecraft Block
     public static final DeferredBlock<Block> DATURA_LEAVES_BLOCK = registerBlock("datura_leaves_block",
-                () -> new Block(BlockBehaviour.Properties.of()
-                        .strength(4f).requiresCorrectToolForDrops()
-                        .sound(SoundType.AZALEA_LEAVES))
-            );
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops()
+                    .sound(SoundType.AZALEA_LEAVES)));
 
 
 
 
-    private static <T extends Block> DeferredRegister<T> registerBlock(String name, Supplier<T> block){
-        DeferredBlock<T> toReturn = BLOCKS.register(name, block);
-        // Callt die BlockItem ding
-        registerBlockItem(name, toReturn);
-        return toReturn;
-    }
+    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){ DeferredBlock<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn); return toReturn;}
 
     // Macht ein neues Item fuer den Block
-    private static <T extends Blocks> void registerBlockItem(String name, DeferredBlock<T> block) {
-        DaturaModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
+        DaturaModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));}
+
+
+    public static void register(IEventBus eventBus) {
+        BLOCKS.register(eventBus);
     }
-
-
-            public static void register(IEventBus eventBus) {
-                BLOCKS.register(eventBus);
-            }
 }
