@@ -12,7 +12,7 @@ public class DaturaModItems {
     // Datura Category
     public static final DeferredItem<Item> DATURA_POWDER = ITEMS.registerSimpleItem("datura_powder", new Item.Properties());
     public static final DeferredItem<Item> DATURA_SEEDS = ITEMS.registerSimpleItem("datura_seeds", new Item.Properties());
-
+    public static final DeferredItem<Item> DATURA_LEAVES = ITEMS.registerSimpleItem("datura_leaves", new Item.Properties());
 
 
     //  Cocaine Category

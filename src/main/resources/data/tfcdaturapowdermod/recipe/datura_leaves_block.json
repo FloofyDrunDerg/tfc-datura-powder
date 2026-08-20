@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "tfcdaturapowdermod:datura_leaves"
+    },
+    "Y": {
+      "item": "tfc:wool_yarn"
+    }
+  },
+  "pattern": [
+    "DDD",
+    "DYD",
+    "DDD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "tfcdaturapowdermod:datura_leaves_block"
+
+  }
+}

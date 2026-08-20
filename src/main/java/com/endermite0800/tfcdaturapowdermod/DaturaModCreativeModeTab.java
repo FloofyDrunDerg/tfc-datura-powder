@@ -27,7 +27,7 @@ public class DaturaModCreativeModeTab {
                         output.accept(DaturaModItems.COCAINE_POWDER);
                         output.accept(DaturaModItems.RAW_COCAINE);
                         output.accept(DaturaModItems.DATURA_POWDER);
-
+                        output.accept(DaturaModItems.DATURA_LEAVES);
 
                     } )).build());
 

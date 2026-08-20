@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "tfcdaturapowdermod:datura_leaves_block" }
+  ],
+  "result": {
+    "id": "tfcdaturapowdermod:datura_leaves",
+    "count": 8
+  }
+}

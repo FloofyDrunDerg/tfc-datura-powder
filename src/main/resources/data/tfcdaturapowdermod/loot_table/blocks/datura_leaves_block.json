@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [{"condition": "minecraft:survives_explosion"}],
+      "entries": [{
+          "type": "minecraft:item",
+          "name": "tfcdaturapowdermod:datura_leaves_block"
+        }],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "tfcdaturapowdermod:blocks/datura_leaves_block"
+}
