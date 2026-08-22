@@ -20,11 +20,12 @@ public class DaturaModCreativeModeTab {
     }
     public static final Supplier<CreativeModeTab> datura_powder_mod_items_tab = CREATIVE_MODE_TAB.register("datura_powder_mod_items_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(DaturaModItems.DATURA_SEEDS.get()))
-                    .title(Component.translatable("creativetab.datura_powder_mod.items"))
+                    .title(Component.translatable("creativetab.tfcdaturapowdermod.items"))
                     .displayItems(((itemDisplayParameters, output) -> {
                         output.accept(DaturaModItems.DATURA_SEEDS);
                         output.accept(DaturaModItems.COCAINE_LEAVES);
                         output.accept(DaturaModItems.COCAINE_POWDER);
+                        output.accept(DaturaModItems.DATURA_POD);
                         output.accept(DaturaModItems.RAW_COCAINE);
                         output.accept(DaturaModItems.DATURA_POWDER);
                         output.accept(DaturaModItems.DATURA_LEAVES);
@@ -34,7 +35,7 @@ public class DaturaModCreativeModeTab {
         public static final Supplier<CreativeModeTab> datura_powder_mod_blocks_tab = CREATIVE_MODE_TAB.register("datura_powder_mod_blocks_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(DaturaModBlocks.DATURA_LEAVES_BLOCK.get()))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(DaturapowderMod.MODID, "datura_powder_mod_items_tab"))
-                    .title(Component.translatable("creativetab.datura_powder_mod.blocks"))
+                    .title(Component.translatable("creativetab.tfcdaturapowdermod.blocks"))
                     .displayItems(((itemDisplayParameters, output) -> {
                         output.accept(DaturaModBlocks.DATURA_LEAVES_BLOCK);
 

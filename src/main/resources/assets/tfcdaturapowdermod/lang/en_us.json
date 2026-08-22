@@ -2,11 +2,13 @@
   "item.tfcdaturapowdermod.datura_powder": "Datura Powder",
   "item.tfcdaturapowdermod.datura_leaves": "Datura Leaves",
   "item.tfcdaturapowdermod.datura_seeds": "Datura Seeds",
+  "item.tfcdaturapowdermod.datura_pod": "Datura Pod",
   "item.tfcdaturapowdermod.cocaine_leaves": "Cocaine Leaves",
   "item.tfcdaturapowdermod.cocaine_powder": "Cocaine Powder",
   "item.tfcdaturapowdermod.cocaine_raw": "Raw Cocaine",
 
+
   "block.tfcdaturapowdermod.datura_leaves_block": "Block of Datura Leaves",
-  "creativetab.datura_powder_mod.items": "Datura-Powder Blocks",
-  "creativetab.datura_powder_mod.blocks": "Datura-Powder Items"
+  "creativetab.tfcdaturapowdermod.items": "Datura-Powder Items",
+  "creativetab.tfcdaturapowdermod.blocks": "Datura-Powder Blocks"
 }
